@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useSpring, animated as a } from 'react-spring';
+import { faceArray } from '../data.js';
 import '../stylesheets/card.css'
 
 export default function Card() {
@@ -12,8 +13,8 @@ export default function Card() {
 
     return(
         <div className="card" onClick={() => set(state => !state)}>
-            <a.div className="c back" style={{opacity: opacity.to(o => 1 - o), transform}} />
-            <a.div className="c front" style={{ opacity, transform: transform.to(t => `${t} rotateX(180deg)`) }} />
+            <a.div className="c back" style={{ opacity: opacity.to(o => 1 - o), transform}} />
+            <a.div className="c front" style={{ backgroundImage: faceArray[0], opacity, transform: transform.to(t => `${t} rotateX(180deg)`) }} />
         </div>
     )
 }
