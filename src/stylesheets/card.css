@@ -7,7 +7,7 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(5, 210px);
-    grid-template-rows: 210px;
+    grid-auto-rows: 210px;
     margin-left: 100px;
     margin-right: 100px;
   }
