@@ -3,6 +3,7 @@ import Card from './Card.jsx'
 import { faceArray } from '../data.js';
 import { Grid, Row, Col } from './styledGrid.jsx'
 import '../stylesheets/card.css'
+import { useSelector, useDispatch } from 'react-redux';
 
 export default function CardArea(){
     const [flipped, setFlipped] = useState(0)
@@ -11,11 +12,6 @@ export default function CardArea(){
         setFlipped(flipped => flipped + 1)
     }
     
-    const match = () => {
-        if(flipped === 2){
-            
-        }
-    }
 
     return(
         <div onClick={handleClick} className="grid">
