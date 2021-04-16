@@ -3,7 +3,7 @@ import { useSpring, animated as a } from 'react-spring';
 import { faceArray } from '../data.js';
 import '../stylesheets/card.css'
 
-export default function Card() {
+export default function Card(props) {
     const [flipped, set] = useState(false);
     const { transform, opacity } = useSpring({
         opacity: flipped ? 1 : 0,
@@ -12,9 +12,9 @@ export default function Card() {
       })
 
     return(
-        <div className="card" onClick={() => set(state => !state)}>
+        <div className={props.class} onClick={() => set(state => !state)}>
             <a.div className="c back" style={{ opacity: opacity.to(o => 1 - o), transform}} />
-            <a.div className="c front" style={{ backgroundImage: faceArray[0], opacity, transform: transform.to(t => `${t} rotateX(180deg)`) }} />
+            <a.div className="c front" style={{ backgroundImage: props.image, opacity, transform: transform.to(t => `${t} rotateX(180deg)`) }} />
         </div>
     )
 }

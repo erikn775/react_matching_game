@@ -1,11 +1,13 @@
 
 import './App.css';
-import Card from './components/Card.jsx'
+import CardArea from './components/CardArea.jsx'
+import { Grid, Row, Col } from './components/styledGrid.jsx'
 
-function App() {
+
+const App = () => {
   return (
     <div className="App">
-        <Card/>
+          <CardArea/>
     </div>
   );
 }
