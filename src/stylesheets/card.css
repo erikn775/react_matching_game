@@ -6,10 +6,13 @@
   
   .grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 200px;
+    grid-template-columns: repeat(5, 210px);
+    grid-template-rows: 210px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
   .c {
+    
     position: absolute;
     max-width: 200px;
     max-height: 200px;
