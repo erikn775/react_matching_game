@@ -6,13 +6,19 @@ import '../stylesheets/card.css'
 import { useSelector, useDispatch } from 'react-redux';
 
 export default function CardArea(){
-    const [flipped, setFlipped] = useState(0)
+    const [click, setClick] = useState({disabled: false})
+    
+    
 
     const handleClick = (event) => {
-        dispatch({type: "FLIP", payload: event.target.style.backgroundImage})
+            dispatch({type: "FLIP", payload: event.target.style.backgroundImage})
+        
     }
     
-    const counter = useSelector(state => console.log(state));
+    const counter = useSelector(state => {
+        console.log(state)
+        
+    });
     const dispatch = useDispatch();
 
 

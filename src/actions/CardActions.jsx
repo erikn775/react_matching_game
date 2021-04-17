@@ -1,0 +1,1 @@
+export const addCard = (event) => ({type: "FLIP", payload: event})

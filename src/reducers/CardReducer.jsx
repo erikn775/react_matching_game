@@ -1,8 +1,13 @@
 	
-export default function CardReducer(state = {flippedArr: [], matched: []}, action){
+export default function CardReducer(state = {flipped1: null, flipped2: null, matched: []}, action){
 switch (action.type) {
     case "FLIP":
-        return {...state, flippedArr: action.payload};
+        if(state.flipped1 === null){
+            return {...state, flipped1: action.payload}
+        }
+        else{
+            return {...state, flipped2: action.payload}
+        }
     default:
       return state;
   }
