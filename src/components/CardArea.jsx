@@ -8,10 +8,13 @@ import { useSelector, useDispatch } from 'react-redux';
 export default function CardArea(){
     const [flipped, setFlipped] = useState(0)
 
-    const handleClick = () => {
-        setFlipped(flipped => flipped + 1)
+    const handleClick = (event) => {
+        dispatch({type: "FLIP", payload: event.target.style.backgroundImage})
     }
     
+    const counter = useSelector(state => console.log(state));
+    const dispatch = useDispatch();
+
 
     return(
         <div onClick={handleClick} className="grid">

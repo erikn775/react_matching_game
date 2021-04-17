@@ -12,8 +12,8 @@ export default function Card(props) {
         config: { mass: 5, tension: 500, friction: 80 }
       })
 
-    const counter = useSelector(state => console.log(state));
-    const dispatch = useDispatch();
+    // const counter = useSelector(state => console.log(state));
+    // const dispatch = useDispatch();
 
     // const handleClick = () => {
     //     set(state => !state);
@@ -21,7 +21,7 @@ export default function Card(props) {
     // }
 
     return(
-        <div className={props.class} onClick={() => {dispatch({type: "FLIP", payload: props.image}); set(state => !state);}}>
+        <div className={props.class} onClick={() => set(state => !state)}>
             <a.div className="c back" style={{ opacity: opacity.to(o => 1 - o), transform}} />
             <a.div className="c front" style={{ backgroundImage: props.image, opacity, transform: transform.to(t => `${t} rotateX(180deg)`) }} />
         </div>
