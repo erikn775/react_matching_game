@@ -11,7 +11,7 @@ export default function CardArea(){
     
 
     const handleClick = (event) => {
-            dispatch({type: "FLIP", payload: event.target.style.backgroundImage})
+        dispatch({type: "FLIP", payload: event.target.style.backgroundImage})
         
     }
     

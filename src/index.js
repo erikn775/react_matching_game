@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import CardReducer from './reducers/CardReducer.jsx'
+import {Form, Button, Modal} from 'react-bootstrap';
 
 const store = createStore(CardReducer)
 
